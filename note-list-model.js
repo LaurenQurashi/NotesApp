@@ -10,11 +10,11 @@
   };
 
   NoteList.prototype.show = function(){
-    // return this.list[this.list.length - 1]
-    var iterator = this.list.values();
-    for (let note of this.list){
-      return note.text
-    };
+    return this.list;
+    // var iterator = this.list.values();
+    // for (let note of this.list){
+    //   return note.text
+
   };
 
   exports.NoteList= NoteList;

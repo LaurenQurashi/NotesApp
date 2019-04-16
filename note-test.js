@@ -35,8 +35,12 @@
   function showsOneNote() {
     var noteList = new NoteList;
     var note = new Note('Yas');
+    console.log(note)
     noteList.store(note);
-    assert.isTrue(noteList.show() === "Yas");
+    console.log(noteList.show())
+    var output = noteList.show();
+    assert.isTrue(output.length === 1);
+    assert.isTrue(output[0] === note);
   }
 
   showsOneNote();
@@ -47,8 +51,9 @@
     var note2 = new Note('Nope');
     noteList.store(note);
     noteList.store(note2);
-    console.log(noteList.show());
-    assert.isTrue(noteList.show() === '${note.text}\n${note2.text}');
+    var twotest = noteList.show();
+    assert.isTrue(twotest.length === 2);
+    assert.isTrue(twotest[1] === note2);
   }
 
   showsTwoNotes();
