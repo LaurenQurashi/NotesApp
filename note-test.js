@@ -74,8 +74,17 @@
     assert.isTrue(noteyMcNoteFace === "<ul><li><div>Notey</div></li><li><div>floatey</div></li><li><div>goatey</div></li></ul>")
   }
 
-
   returnsHTMLString()
+
+  function checkForZero() {
+    noteslist = new NoteList;
+    nVL = new NotesListView(noteslist);
+    noteyMcNoteFace = nVL.htmlMaker(noteslist);
+    assert.isTrue(noteyMcNoteFace === "Umm no notes hun")
+  }
+
+
+  checkForZero()
 
 })(this);
 //  this is our legit tests.

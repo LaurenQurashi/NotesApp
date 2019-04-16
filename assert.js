@@ -2,9 +2,9 @@
 var assert = {
   isTrue: function(assertionToCheck) {
     if (!assertionToCheck) {
-      throw new Error ("Failure: " + assertionToCheck + " response to test");
+      throw new Error ("Failure: " + assertionToCheck + " Is a mess");
     } else {
-      console.log("Test passed!");
+      console.log("Test passed! ");
     }
   }
 };
