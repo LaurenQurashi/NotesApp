@@ -5,16 +5,12 @@
     this.list = [];
   };
 
-  NoteList.prototype.store = function(note){
+  NoteList.prototype.store = function(note = new Note(text)){
     this.list.push(note);
   };
 
   NoteList.prototype.show = function(){
     return this.list;
-    // var iterator = this.list.values();
-    // for (let note of this.list){
-    //   return note.text
-
   };
 
   exports.NoteList= NoteList;

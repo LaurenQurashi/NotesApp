@@ -35,9 +35,7 @@
   function showsOneNote() {
     var noteList = new NoteList;
     var note = new Note('Yas');
-    console.log(note)
     noteList.store(note);
-    console.log(noteList.show())
     var output = noteList.show();
     assert.isTrue(output.length === 1);
     assert.isTrue(output[0] === note);
@@ -57,5 +55,27 @@
   }
 
   showsTwoNotes();
+
+})(this);
+
+(function(exports) {
+
+  function returnsHTMLString() {
+
+    note = new Note("Notey");
+    note2 = new Note("floatey");
+    note3 = new Note("goatey");
+    noteslist = new NoteList;
+    noteslist.store(note);
+    noteslist.store(note2);
+    noteslist.store(note3);
+    nVL = new NotesListView(noteslist);
+    noteyMcNoteFace = nVL.htmlMaker(noteslist);
+    assert.isTrue(noteyMcNoteFace === "<ul><li><div>Notey</div></li><li><div>floatey</div></li><li><div>goatey</div></li></ul>")
+  }
+
+
+  returnsHTMLString()
+
 })(this);
 //  this is our legit tests.
