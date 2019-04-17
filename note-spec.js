@@ -11,7 +11,12 @@
   }
   returnsNoteContents();
 
-
+  function takesAnId() {
+    var note = new Note("noot", 0);
+    assert.isTrue(note.id === 0);
+  }
+  takesAnId()
+  
 })(this);
 
 
