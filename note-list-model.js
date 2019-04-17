@@ -5,7 +5,7 @@
     this.list = [];
   };
 
-  NoteList.prototype.store = function(note = new Note(text)){
+  NoteList.prototype.store = function(note){
     this.list.push(note);
   };
 
