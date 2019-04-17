@@ -10,7 +10,7 @@
   } else {
     noteyMcNoteFace = "<ul>"
     for (var i = 0; i < nLen; i++) {
-      noteyMcNoteFace += "<li><div>" + notesList.list[i].text + "</div></li>";
+      noteyMcNoteFace += "<li><div>" + notesList.list[i].text.substring(0,20) + "</div></li>";
     }
     noteyMcNoteFace += "</ul>";
   };

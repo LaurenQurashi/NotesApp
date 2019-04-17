@@ -31,4 +31,15 @@
 
   checkForZero()
 
+  function returnsOnly20() {
+    function NoteDouble(text) { this.text = text };
+    note1 = new NoteDouble("12345678901234567890!!!!!")
+    function NoteListDouble() {}
+    noteslist = new NoteListDouble;
+    NoteListDouble.prototype.list = [note1]
+    nVL = new NotesListView(noteslist);
+    noteyMcNoteFace = nVL.htmlMaker(noteslist);
+    assert.isTrue(noteyMcNoteFace === "<ul><li><div>12345678901234567890</div></li></ul>")
+  }
+  returnsOnly20()
 })(this);
