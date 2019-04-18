@@ -6,7 +6,7 @@ function Note(text, id){
   this.id = id;
 };
 
-exports.Note= Note;
+exports.Note = Note;
 // exports the note so that it's available to the other files.
 
 Note.prototype.noteContent = function () {
